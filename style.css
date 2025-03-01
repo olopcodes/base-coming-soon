@@ -26,7 +26,6 @@ img {
   display: flex;
   flex-direction: column;
   min-height: 100lvh;
-  background-image: ;
 }
 
 .base-hero-desktop-img {
@@ -134,7 +133,11 @@ form button {
   }
 }
 
-@media screen and (min-width: 988px) {
+@media screen and (min-width: 980px) {
+  body {
+    height: 100lvh;
+  }
+
   .base-header,
   .base-text-container {
     width: 500px;
@@ -144,14 +147,21 @@ form button {
   .base-header {
     justify-content: flex-start;
     padding-left: 3rem;
+    padding-bottom: 0;
   }
 
   .base-text-container {
     text-align: left;
+    padding-top: 0;
   }
 
   .base-text-container h1 {
     text-align: left;
+    font-size: 4rem;
+  }
+
+  .base-text-container p {
+    font-size: 1.5rem;
   }
 
   form {
