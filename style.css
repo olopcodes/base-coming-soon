@@ -100,11 +100,12 @@ form button {
 @media screen and (min-width: 768px) {
   .main-content-wrapper {
     display: grid;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 55% 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(150px, auto));
     grid-template-areas:
       "header img"
-      "text img";
-    /* flex-wrap: wrap; */
+      "text img"
+      "footer footer";
   }
 
   .base-hero-mobile-img {
@@ -122,21 +123,38 @@ form button {
 
   .base-header {
     grid-area: header;
-    padding-top: 2rem;
-    padding-bottom: 0;
-    padding-left: 5rem;
-    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .base-text-container {
+    grid-area: text;
+    padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 988px) {
+  .base-header,
+  .base-text-container {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .base-header {
+    justify-content: flex-start;
+    padding-left: 3rem;
+  }
+
+  .base-text-container {
+    text-align: left;
   }
 
   .base-text-container h1 {
     text-align: left;
   }
 
-  .base-text-container {
-    grid-area: text;
-    padding: 2rem 4rem;
-    text-align: left;
-    border: 1px solid;
-    width: 600px;
+  form {
+    width: 300px;
   }
 }
